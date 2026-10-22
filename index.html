@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modalidades de Taller de Grado I</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Courier Prime for Typewriter feel and Inter for clean body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F7EECA', // Color de fondo beige/crema exacto a la imagen
+                        creamDark: '#EFE2B3',
+                        vintageBlack: '#0d0d0d',
+                    },
+                    fontFamily: {
+                        typewriter: ['"Courier Prime"', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos personalizados separados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-black selection:text-cream">
+
+    <!-- PANTALLA 1: INICIO -->
+    <main id="home-screen" class="flex-grow flex flex-col items-center justify-center p-4 md:p-8 max-w-6xl mx-auto w-full transition-opacity duration-500">
+        <!-- Encabezado Principal -->
+        <header class="text-center mb-12 mt-4">
+            <p class="font-typewriter text-xl sm:text-2xl md:text-3xl font-bold tracking-tight mb-2">
+                Modalidades de :
+            </p>
+            <h1 class="font-typewriter text-3xl sm:text-5xl md:text-6xl font-black tracking-wider uppercase border-b-4 border-black pb-2 inline-block">
+                TALLER DE GRADO I
+            </h1>
+            <div class="w-full border-b-4 border-black mt-1"></div>
+        </header>
+
+        <!-- Contenedor de las Tres Columnas / Pilares -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full my-auto py-6">
+            
+            <!-- Pilar 1: Tesis de Grado -->
+            <article onclick="openModalidad('tesis')" class="pillar-card flex flex-col items-center text-center group p-4 rounded-xl hover:bg-creamDark/40">
+                <!-- SVG Ilustración de Columna Clásica -->
+                <svg class="pillar-svg w-32 h-44 sm:w-40 sm:h-52 text-black transition-all duration-300" viewBox="0 0 100 140" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Capital Superior -->
+                    <rect x="20" y="10" width="60" height="8" rx="4" />
+                    <line x1="15" y1="18" x2="85" y2="18" stroke-width="3" />
+                    <path d="M 20 18 C 15 18, 10 25, 18 28 C 22 29, 25 24, 25 24" />
+                    <path d="M 80 18 C 85 18, 90 25, 82 28 C 78 29, 75 24, 75 24" />
+                    <line x1="22" y1="24" x2="78" y2="24" />
+                    <!-- Estriado / Fuste Superior -->
+                    <line x1="30" y1="30" x2="30" y2="60" />
+                    <line x1="43" y1="30" x2="43" y2="65" />
+                    <line x1="57" y1="30" x2="57" y2="65" />
+                    <line x1="70" y1="30" x2="70" y2="60" />
+                    <!-- Fuste Inferior -->
+                    <line x1="30" y1="80" x2="30" y2="110" />
+                    <line x1="43" y1="75" x2="43" y2="110" />
+                    <line x1="57" y1="75" x2="57" y2="110" />
+                    <line x1="70" y1="80" x2="70" y2="110" />
+                    <!-- Basa Inferior -->
+                    <line x1="22" y1="116" x2="78" y2="116" />
+                    <path d="M 20 122 C 15 122, 10 115, 18 112 C 22 111, 25 116, 25 116" />
+                    <path d="M 80 122 C 85 122, 90 115, 82 112 C 78 111, 75 116, 75 116" />
+                    <line x1="15" y1="122" x2="85" y2="122" stroke-width="3" />
+                    <rect x="20" y="122" width="60" height="8" rx="4" />
+                </svg>
+
+                <h2 class="font-typewriter text-2xl sm:text-3xl font-bold mt-4 mb-1 group-hover:underline">
+                    Tesis de<br>Grado
+                </h2>
+                <span class="text-xs font-semibold uppercase tracking-wider text-gray-700 mt-2 bg-black/5 px-3 py-1 rounded-full group-hover:bg-black group-hover:text-cream transition-colors">
+                    Hacer Clic para Explorar <i class="fa-solid fa-arrow-right ml-1"></i>
+                </span>
+            </article>
+
+            <!-- Pilar 2: Plan de Negocio -->
+            <article onclick="openModalidad('plan')" class="pillar-card flex flex-col items-center text-center group p-4 rounded-xl hover:bg-creamDark/40">
+                <svg class="pillar-svg w-32 h-44 sm:w-40 sm:h-52 text-black transition-all duration-300" viewBox="0 0 100 140" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Capital Superior -->
+                    <rect x="20" y="10" width="60" height="8" rx="4" />
+                    <line x1="15" y1="18" x2="85" y2="18" stroke-width="3" />
+                    <path d="M 20 18 C 15 18, 10 25, 18 28 C 22 29, 25 24, 25 24" />
+                    <path d="M 80 18 C 85 18, 90 25, 82 28 C 78 29, 75 24, 75 24" />
+                    <line x1="22" y1="24" x2="78" y2="24" />
+                    <!-- Fuste -->
+                    <line x1="30" y1="30" x2="30" y2="60" />
+                    <line x1="43" y1="30" x2="43" y2="65" />
+                    <line x1="57" y1="30" x2="57" y2="65" />
+                    <line x1="70" y1="30" x2="70" y2="60" />
+                    <line x1="30" y1="80" x2="30" y2="110" />
+                    <line x1="43" y1="75" x2="43" y2="110" />
+                    <line x1="57" y1="75" x2="57" y2="110" />
+                    <line x1="70" y1="80" x2="70" y2="110" />
+                    <!-- Basa -->
+                    <line x1="22" y1="116" x2="78" y2="116" />
+                    <path d="M 20 122 C 15 122, 10 115, 18 112 C 22 111, 25 116, 25 116" />
+                    <path d="M 80 122 C 85 122, 90 115, 82 112 C 78 111, 75 116, 75 116" />
+                    <line x1="15" y1="122" x2="85" y2="122" stroke-width="3" />
+                    <rect x="20" y="122" width="60" height="8" rx="4" />
+                </svg>
+
+                <h2 class="font-typewriter text-2xl sm:text-3xl font-bold mt-4 mb-1 group-hover:underline">
+                    Plan de<br>Negocio
+                </h2>
+                <span class="text-xs font-semibold uppercase tracking-wider text-gray-700 mt-2 bg-black/5 px-3 py-1 rounded-full group-hover:bg-black group-hover:text-cream transition-colors">
+                    Hacer Clic para Explorar <i class="fa-solid fa-arrow-right ml-1"></i>
+                </span>
+            </article>
+
+            <!-- Pilar 3: Trabajo Dirigido -->
+            <article onclick="openModalidad('trabajo')" class="pillar-card flex flex-col items-center text-center group p-4 rounded-xl hover:bg-creamDark/40">
+                <svg class="pillar-svg w-32 h-44 sm:w-40 sm:h-52 text-black transition-all duration-300" viewBox="0 0 100 140" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Capital Superior -->
+                    <rect x="20" y="10" width="60" height="8" rx="4" />
+                    <line x1="15" y1="18" x2="85" y2="18" stroke-width="3" />
+                    <path d="M 20 18 C 15 18, 10 25, 18 28 C 22 29, 25 24, 25 24" />
+                    <path d="M 80 18 C 85 18, 90 25, 82 28 C 78 29, 75 24, 75 24" />
+                    <line x1="22" y1="24" x2="78" y2="24" />
+                    <!-- Fuste -->
+                    <line x1="30" y1="30" x2="30" y2="60" />
+                    <line x1="43" y1="30" x2="43" y2="65" />
+                    <line x1="57" y1="30" x2="57" y2="65" />
+                    <line x1="70" y1="30" x2="70" y2="60" />
+                    <line x1="30" y1="80" x2="30" y2="110" />
+                    <line x1="43" y1="75" x2="43" y2="110" />
+                    <line x1="57" y1="75" x2="57" y2="110" />
+                    <line x1="70" y1="80" x2="70" y2="110" />
+                    <!-- Basa -->
+                    <line x1="22" y1="116" x2="78" y2="116" />
+                    <path d="M 20 122 C 15 122, 10 115, 18 112 C 22 111, 25 116, 25 116" />
+                    <path d="M 80 122 C 85 122, 90 115, 82 112 C 78 111, 75 116, 75 116" />
+                    <line x1="15" y1="122" x2="85" y2="122" stroke-width="3" />
+                    <rect x="20" y="122" width="60" height="8" rx="4" />
+                </svg>
+
+                <h2 class="font-typewriter text-2xl sm:text-3xl font-bold mt-4 mb-1 group-hover:underline">
+                    Trabajo<br>Dirigido
+                </h2>
+                <span class="text-xs font-semibold uppercase tracking-wider text-gray-700 mt-2 bg-black/5 px-3 py-1 rounded-full group-hover:bg-black group-hover:text-cream transition-colors">
+                    Hacer Clic para Explorar <i class="fa-solid fa-arrow-right ml-1"></i>
+                </span>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- PANTALLA 2: SECCIÓN DE MODALIDAD DETALLADA (Inicia Oculta) -->
+    <div id="section-screen" class="fixed inset-0 bg-cream z-50 overflow-y-auto hidden">
+        <div class="min-h-screen flex flex-col justify-between p-4 sm:p-8 md:p-12 max-w-5xl mx-auto">
+            
+            <div>
+                <!-- Botón para Volver al Inicio -->
+                <button onclick="closeModalidad()" class="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-black text-cream rounded-lg hover:bg-gray-800 transition-colors text-sm font-semibold shadow-md">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a Modalidades
+                </button>
+
+                <!-- Header de la Modalidad -->
+                <header class="mb-6">
+                    <p class="font-typewriter text-xl sm:text-2xl font-bold">Modalidad Via:</p>
+                    <h1 id="modalidad-title" class="font-typewriter text-3xl sm:text-5xl font-black mb-3 border-b-2 border-black pb-2">
+                        Tesis de Grado
+                    </h1>
+                    <div class="border-b border-black w-full mb-6"></div>
+                    
+                    <!-- Definición -->
+                    <p id="modalidad-definition" class="text-base sm:text-lg text-gray-900 leading-relaxed max-w-4xl font-normal">
+                        Definición: Una tesis de grado es un trabajo de investigación original y argumentado que permite obtener un título académico. Consiste en plantear un problema, formular una hipótesis o objetivos, analizar evidencia y presentar conclusiones propias respaldadas bajo un rigor metodológico y científico.
+                    </p>
+                </header>
+
+                <!-- Menús Desplegables (Acordeones) -->
+                <section class="space-y-4 my-8 max-w-3xl">
+
+                    <!-- 1. Funciones Tribunal -->
+                    <div class="rounded-2xl overflow-hidden shadow-sm">
+                        <button onclick="toggleAccordion('acc-tribunal', 'arrow-tribunal')" class="w-full bg-black text-white px-6 py-4 flex justify-between items-center text-left text-lg sm:text-xl font-medium rounded-2xl hover:bg-gray-900 transition-all">
+                            <span>Funciones Tribunal:</span>
+                            <!-- Triángulo Blanco estilo imagen -->
+                            <span id="arrow-tribunal" class="triangle-icon transform transition-transform">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor">
+                                    <polygon points="0,0 20,0 10,16"/>
+                                </svg>
+                            </span>
+                        </button>
+                        
+                        <div id="acc-tribunal" class="accordion-content bg-white/60 border border-black/10 rounded-b-2xl mt-1">
+                            <div class="p-6 space-y-4 text-gray-800">
+                                <div id="tribunal-content">
+                                    <!-- Contenido dinámico JS -->
+                                </div>
+                                <div class="pt-4 border-t border-black/10 flex justify-end">
+                                    <a id="btn-doc-tribunal" href="#" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold bg-black text-cream px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                                        <i class="fa-solid fa-file-pdf"></i> Ver Documento Completo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Elementos de Competencia -->
+                    <div class="rounded-2xl overflow-hidden shadow-sm">
+                        <button onclick="toggleAccordion('acc-elementos', 'arrow-elementos')" class="w-full bg-black text-white px-6 py-4 flex justify-between items-center text-left text-lg sm:text-xl font-medium rounded-2xl hover:bg-gray-900 transition-all">
+                            <span>Elementos de Competencia:</span>
+                            <span id="arrow-elementos" class="triangle-icon transform transition-transform">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor">
+                                    <polygon points="0,0 20,0 10,16"/>
+                                </svg>
+                            </span>
+                        </button>
+                        
+                        <div id="acc-elementos" class="accordion-content bg-white/60 border border-black/10 rounded-b-2xl mt-1">
+                            <div class="p-6 space-y-4 text-gray-800">
+                                <div id="elementos-content">
+                                    <!-- Contenido dinámico JS -->
+                                </div>
+                                <div class="pt-4 border-t border-black/10 flex justify-end">
+                                    <a id="btn-doc-elementos" href="#" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold bg-black text-cream px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                                        <i class="fa-solid fa-file-pdf"></i> Ver Documento Completo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Proceso para defensa del Primer Panel -->
+                    <div class="rounded-2xl overflow-hidden shadow-sm">
+                        <button onclick="toggleAccordion('acc-proceso', 'arrow-proceso')" class="w-full bg-black text-white px-6 py-4 flex justify-between items-center text-left text-lg sm:text-xl font-medium rounded-2xl hover:bg-gray-900 transition-all">
+                            <span>Proceso para defensa del Primer Panel:</span>
+                            <span id="arrow-proceso" class="triangle-icon transform transition-transform">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor">
+                                    <polygon points="0,0 20,0 10,16"/>
+                                </svg>
+                            </span>
+                        </button>
+                        
+                        <div id="acc-proceso" class="accordion-content bg-white/60 border border-black/10 rounded-b-2xl mt-1">
+                            <div class="p-6 space-y-4 text-gray-800">
+                                <div id="proceso-content">
+                                    <!-- Contenido dinámico JS -->
+                                </div>
+                                <div class="pt-4 border-t border-black/10 flex justify-end">
+                                    <a id="btn-doc-proceso" href="#" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold bg-black text-cream px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                                        <i class="fa-solid fa-file-pdf"></i> Ver Documento Completo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Cronograma -->
+                    <div class="rounded-2xl overflow-hidden shadow-sm">
+                        <button onclick="toggleAccordion('acc-cronograma', 'arrow-cronograma')" class="w-full bg-black text-white px-6 py-4 flex justify-between items-center text-left text-lg sm:text-xl font-medium rounded-2xl hover:bg-gray-900 transition-all">
+                            <span>Cronograma:</span>
+                            <span id="arrow-cronograma" class="triangle-icon transform transition-transform">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor">
+                                    <polygon points="0,0 20,0 10,16"/>
+                                </svg>
+                            </span>
+                        </button>
+                        
+                        <div id="acc-cronograma" class="accordion-content bg-white/60 border border-black/10 rounded-b-2xl mt-1">
+                            <div class="p-6 space-y-4 text-gray-800">
+                                <div id="cronograma-content">
+                                    <!-- Contenido dinámico JS -->
+                                </div>
+                                <div class="pt-4 border-t border-black/10 flex justify-end">
+                                    <a id="btn-doc-cronograma" href="#" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold bg-black text-cream px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                                        <i class="fa-solid fa-file-pdf"></i> Ver Documento Completo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            <!-- Pie de Página Fijo estilo imagen -->
+            <footer class="mt-12 -mx-4 sm:-mx-8 md:-mx-12 -mb-4 sm:-mb-8 md:-mb-12 bg-black text-cream text-center py-3 px-4 text-xs sm:text-sm font-light">
+                Carrera de Ingeniería Comercial & Marketing y Medios Digitales - UCB
+            </footer>
+        </div>
+    </div>
+
+    <!-- Pie de página en Inicio -->
+    <footer id="home-footer" class="bg-black text-cream text-center py-3 px-4 text-xs sm:text-sm font-light w-full">
+        Carrera de Ingeniería Comercial & Marketing y Medios Digitales - UCB
+    </footer>
+
+    <!-- SCRIPT DE LÓGICA E INFORMACIÓN DINÁMICA -->
+    <script>
+        /* ========================================================================
+           BASE DE DATOS COMPLETA DE MODALIDADES
+           (Fácilmente extensible o reemplazable mediante API / Google Sheets)
+           ======================================================================== */
+        const dataModalidades = {
+            tesis: {
+                titulo: "Tesis de Grado",
+                definicion: "Definición: Una tesis de grado es un trabajo de investigación original y argumentado que permite obtener un título académico. Consiste en plantear un problema, formular una hipótesis o objetivos, analizar evidencia y presentar conclusiones propias respaldadas bajo un rigor metodológico y científico.",
+                tribunal: [
+                    { rol: "TUTOR", desc: "Guía metodológica y disciplinarmente al estudiante durante todo el proceso de investigación. Revisa avances, aprueba el documento preliminar y valida el cumplimiento académico." },
+                    { rol: "PANELISTA", desc: "Especialista académico o profesional encargado de evaluar el rigor del perfil, realizar observaciones constructivas y dictaminar la pertinencia técnica del trabajo." },
+                    { rol: "RELATOR", desc: "Responsable de coordinar las sesiones formales de evaluación, fiscalizar la transparencia del procedimiento e integrar el acta final del tribunal." }
+                ],
+                elementos: [
+                    "Competencia 1: Definición clara del problema de investigación y justificación científica/comercial.",
+                    "Competencia 2: Construcción de un marco teórico robusto y estado del arte actualizado.",
+                    "Competencia 3: Diseño metodológico cuantitativo o cualitativo riguroso.",
+                    "Competencia 4: Levantamiento, procesamiento y análisis crítico de datos empíricos.",
+                    "Competencia 5: Formulación de conclusiones, recomendaciones e impacto disciplinar."
+                ],
+                proceso: [
+                    { paso: "1", titulo: "Registro de Tema", desc: "Presentación de la ficha de inscripción y aprobación inicial por la Dirección de Carrera." },
+                    { paso: "2", titulo: "Asignación de Tutor", desc: "Designación del docente guía acorde al área temática seleccionada." },
+                    { paso: "3", titulo: "Desarrollo del Perfil", desc: "Redacción del perfil de tesis con tutorías periódicas y verificación de avances." },
+                    { paso: "4", titulo: "Solicitud de Primer Panel", desc: "Entrega del perfil finalizado y aprobación formal para fecha de defensa." },
+                    { paso: "5", titulo: "Defensa Primer Panel", desc: "Exposición oral ante el tribunal asignado y recepción de dictamen." }
+                ],
+                cronograma: [
+                    { fecha: "Semana 1 - 2", actividad: "Presentación y aprobación de Perfiles Generales" },
+                    { fecha: "Semana 3 - 6", actividad: "Semanas de Tutoría e Investigación de Campo" },
+                    { fecha: "Semana 7", actividad: "Entrega oficial del Borrador del Perfil" },
+                    { fecha: "Semana 9 - 10", actividad: "Sesiones de Defensa de Primer Panel" }
+                ],
+                docs: {
+                    tribunal: "https://docs.google.com/document/d/ejemplo-tesis-tribunal",
+                    elementos: "https://docs.google.com/document/d/ejemplo-tesis-elementos",
+                    proceso: "https://docs.google.com/document/d/ejemplo-tesis-proceso",
+                    cronograma: "https://docs.google.com/document/d/ejemplo-tesis-cronograma"
+                }
+            },
+            plan: {
+                titulo: "Plan de Negocio",
+                definicion: "Definición: Un plan de negocio es un documento formal donde se evalúa la viabilidad comercial, técnica, operativa y financiera de un nuevo emprendimiento o unidad de negocio. Permite diseñar estrategias de mercado sustentables y modelos de monetización sólidos.",
+                tribunal: [
+                    { rol: "TUTOR", desc: "Asesora la estructuración del modelo de negocio, análisis financiero y propuesta de valor comercial." },
+                    { rol: "PANELISTA", desc: "Evaluador enfocado en la factibilidad de mercado, rentabilidad, escalabilidad y coherencia estratégica." },
+                    { rol: "RELATOR", desc: "Supervisa la defensa del modelo de negocio y vela por el cumplimiento de los criterios institucionales de evaluación." }
+                ],
+                elementos: [
+                    "Competencia 1: Identificación de la oportunidad de mercado y propuesta de valor única.",
+                    "Competencia 2: Estudio de mercado, análisis de la competencia y segmento objetivo.",
+                    "Competencia 3: Plan de marketing, ventas y canales de distribución.",
+                    "Competencia 4: Plan de operaciones, estructura organizacional y legal.",
+                    "Competencia 5: Evaluación financiera (VAN, TIR, flujo de caja y análisis de sensibilidad)."
+                ],
+                proceso: [
+                    { paso: "1", titulo: "Validación de Idea", desc: "Aprobación de la oportunidad de negocio propuesta por parte del comité de carrera." },
+                    { paso: "2", titulo: "Designación de Tutor", desc: "Asignación del mentor en estrategia comercial y financiamiento." },
+                    { paso: "3", titulo: "Elaboración del Plan", desc: "Desarrollo del estudio de mercado y corridas financieras iniciales." },
+                    { paso: "4", titulo: "Revisión Pre-Panel", desc: "Revisión final de indicadores financieros y viabilidad técnica." },
+                    { paso: "5", titulo: "Defensa Primer Panel", desc: "Sustentación del modelo de negocio ante el jurado evaluador." }
+                ],
+                cronograma: [
+                    { fecha: "Semana 1 - 2", actividad: "Presentación de la propuesta de negocio" },
+                    { fecha: "Semana 3 - 6", actividad: "Investigación de mercado y proyecciones financieras" },
+                    { fecha: "Semana 7", actividad: "Presentación del plan de operaciones y modelo económico" },
+                    { fecha: "Semana 9 - 10", actividad: "Evaluación y defensa en Primer Panel" }
+                ],
+                docs: {
+                    tribunal: "https://docs.google.com/document/d/ejemplo-plan-tribunal",
+                    elementos: "https://docs.google.com/document/d/ejemplo-plan-elementos",
+                    proceso: "https://docs.google.com/document/d/ejemplo-plan-proceso",
+                    cronograma: "https://docs.google.com/document/d/ejemplo-plan-cronograma"
+                }
+            },
+            trabajo: {
+                titulo: "Trabajo Dirigido",
+                definicion: "Definición: Consiste en el desarrollo de una solución práctica e innovadora aplicada a un problema real dentro de una empresa o institución externa. Permite aplicar competencias profesionales para la optimización de procesos de marketing, gestión comercial o transformación digital.",
+                tribunal: [
+                    { rol: "TUTOR ACADÉMICO", desc: "Supervisa la calidad técnica, metodológica y la aplicación teórica en la resolución del problema." },
+                    { rol: "TUTOR INSTITUCIONAL", desc: "Representante de la empresa receptora que valida la aplicabilidad y efectividad del proyecto en la práctica." },
+                    { rol: "PANELISTA / RELATOR", desc: "Evalúan los resultados alcanzados, el impacto organizacional e integran las observaciones institucionales." }
+                ],
+                elementos: [
+                    "Competencia 1: Diagnóstico organizacional y detección precisa de necesidades/problemas.",
+                    "Competencia 2: Fundamentación técnica y estratégica del plan de intervención.",
+                    "Competencia 3: Implementación o diseño detallado de la solución propuesta.",
+                    "Competencia 4: Medición de impacto e indicadores clave de rendimiento (KPIs).",
+                    "Competencia 5: Transferencia de conocimientos y entregables finales a la organización."
+                ],
+                proceso: [
+                    { paso: "1", titulo: "Convenio Institucional", desc: "Firma de acuerdo entre la Universidad y la empresa receptora." },
+                    { paso: "2", titulo: "Aprobación del Diagnóstico", desc: "Validación del problema detectado e hitos a resolver." },
+                    { paso: "3", titulo: "Ejecución de Tutorías", desc: "Reuniones de seguimiento conjunto entre la universidad y la empresa." },
+                    { paso: "4", titulo: "Presentación de Informe", desc: "Aprobación formal de la institución y del tutor académico." },
+                    { paso: "5", titulo: "Defensa Primer Panel", desc: "Exposición de propuesta de intervención y resultados del diagnóstico." }
+                ],
+                cronograma: [
+                    { fecha: "Semana 1 - 2", actividad: "Formalización de convenio y diagnóstico de la empresa" },
+                    { fecha: "Semana 3 - 6", actividad: "Diseño e implementación del plan de trabajo" },
+                    { fecha: "Semana 7", actividad: "Evaluación de avances por el Tutor Institucional" },
+                    { fecha: "Semana 9 - 10", actividad: "Defensa oficial del Primer Panel" }
+                ],
+                docs: {
+                    tribunal: "https://docs.google.com/document/d/ejemplo-trabajo-tribunal",
+                    elementos: "https://docs.google.com/document/d/ejemplo-trabajo-elementos",
+                    proceso: "https://docs.google.com/document/d/ejemplo-trabajo-proceso",
+                    cronograma: "https://docs.google.com/document/d/ejemplo-trabajo-cronograma"
+                }
+            }
+        };
+
+        /* ========================================================================
+           FUNCIONES DE INTERACCIÓN Y NAVEGACIÓN
+           ======================================================================== */
+
+        // Abrir la sección específica de la modalidad
+        function openModalidad(key) {
+            const data = dataModalidades[key];
+            if (!data) return;
+
+            // Cargar Título y Definición
+            document.getElementById('modalidad-title').textContent = data.titulo;
+            document.getElementById('modalidad-definition').textContent = data.definicion;
+
+            // Renderizar Funciones Tribunal
+            const tribunalContainer = document.getElementById('tribunal-content');
+            tribunalContainer.innerHTML = data.tribunal.map(item => `
+                <div class="mb-3">
+                    <h4 class="font-bold text-black font-typewriter text-base sm:text-lg">• ${item.rol}:</h4>
+                    <p class="text-sm sm:text-base text-gray-800 ml-4">${item.desc}</p>
+                </div>
+            `).join('');
+
+            // Renderizar Elementos de Competencia
+            const elementosContainer = document.getElementById('elementos-content');
+            elementosContainer.innerHTML = `
+                <ul class="space-y-2">
+                    ${data.elementos.map(el => `
+                        <li class="flex items-start gap-2 text-sm sm:text-base text-gray-800">
+                            <i class="fa-solid fa-check text-black mt-1"></i>
+                            <span>${el}</span>
+                        </li>
+                    `).join('')}
+                </ul>
+            `;
+
+            // Renderizar Proceso Flujograma
+            const procesoContainer = document.getElementById('proceso-content');
+            procesoContainer.innerHTML = `
+                <div class="space-y-4">
+                    ${data.proceso.map(p => `
+                        <div class="flex items-start gap-4 p-3 bg-cream/40 rounded-xl border border-black/10">
+                            <div class="w-8 h-8 rounded-full bg-black text-cream flex items-center justify-center font-bold text-sm shrink-0">
+                                ${p.paso}
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-900">${p.titulo}</h5>
+                                <p class="text-xs sm:text-sm text-gray-700">${p.desc}</p>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            // Renderizar Cronograma (Tabla)
+            const cronogramaContainer = document.getElementById('cronograma-content');
+            cronogramaContainer.innerHTML = `
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs sm:text-sm border-collapse">
+                        <thead>
+                            <tr class="border-b-2 border-black bg-black/5">
+                                <th class="p-2 font-bold font-typewriter">Fecha / Periodo</th>
+                                <th class="p-2 font-bold font-typewriter">Actividad / Hito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${data.cronograma.map(c => `
+                                <tr class="border-b border-black/10 hover:bg-black/5">
+                                    <td class="p-2 font-semibold text-gray-900 whitespace-nowrap">${c.fecha}</td>
+                                    <td class="p-2 text-gray-800">${c.actividad}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+
+            // Asignar enlaces a los botones de documentos
+            document.getElementById('btn-doc-tribunal').href = data.docs.tribunal;
+            document.getElementById('btn-doc-elementos').href = data.docs.elementos;
+            document.getElementById('btn-doc-proceso').href = data.docs.proceso;
+            document.getElementById('btn-doc-cronograma').href = data.docs.cronograma;
+
+            // Resetear acordeones abiertos previos
+            closeAllAccordions();
+
+            // Mostrar la pantalla con animación slide-up desde abajo
+            const screen = document.getElementById('section-screen');
+            screen.classList.remove('hidden');
+            screen.classList.add('slide-up-enter');
+
+            // Prevenir scroll en la ventana principal
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Cerrar Modalidad y volver al inicio
+        function closeModalidad() {
+            const screen = document.getElementById('section-screen');
+            screen.classList.add('hidden');
+            screen.classList.remove('slide-up-enter');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Control de Acordeón Desplegable
+        function toggleAccordion(contentId, arrowId) {
+            const content = document.getElementById(contentId);
+            const arrow = document.getElementById(arrowId);
+
+            const isOpen = content.classList.contains('active');
+
+            if (isOpen) {
+                content.classList.remove('active');
+                arrow.classList.remove('rotate');
+            } else {
+                content.classList.add('active');
+                arrow.classList.add('rotate');
+            }
+        }
+
+        // Cerrar todos los acordeones
+        function closeAllAccordions() {
+            const contents = document.querySelectorAll('.accordion-content');
+            const arrows = document.querySelectorAll('.triangle-icon');
+
+            contents.forEach(c => c.classList.remove('active'));
+            arrows.forEach(a => a.classList.remove('rotate'));
+        }
+
+        /* ========================================================================
+           HOOK DE INTEGRACIÓN BACKEND FUTURA (Google Sheets / API)
+           Puedes usar esta función para conectar tu hoja de cálculo mediante fetch.
+           ======================================================================== */
+        async function loadDataFromGoogleSheets() {
+            /* 
+               Ejemplo de integración futura:
+               const response = await fetch('TU_URL_DE_GOOGLE_APPS_SCRIPT_O_API');
+               const remoteData = await response.json();
+               Object.assign(dataModalidades, remoteData);
+            */
+            console.log("Estructura lista para consumir Google Sheets API / Apps Script.");
+        }
+
+        // Ejecutar carga preliminar al iniciar
+        window.addEventListener('DOMContentLoaded', () => {
+            loadDataFromGoogleSheets();
+        });
+    </script>
+</body>
+</html>
