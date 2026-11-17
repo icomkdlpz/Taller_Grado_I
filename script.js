@@ -8,20 +8,104 @@ const dataModalidades = {
 
         definicion: "Definición: Una tesis de grado es un trabajo de investigación original y argumentado que permite obtener un título académico. Consiste en plantear un problema, formular una hipótesis o objetivos, analizar evidencia y presentar conclusiones propias respaldadas bajo un rigor metodológico y científico.",
 
-        tribunal: [
-            {
-                rol: "TUTOR",
-                desc: "Guía metodológica y disciplinarmente al estudiante durante todo el proceso de investigación. Revisa avances, aprueba el documento preliminar y valida el cumplimiento académico."
-            },
-            {
-                rol: "PANELISTA",
-                desc: "Especialista académico o profesional encargado de evaluar el rigor del perfil, realizar observaciones constructivas y dictaminar la pertinencia técnica del trabajo."
-            },
-            {
-                rol: "RELATOR",
-                desc: "Responsable de coordinar las sesiones formales de evaluación, fiscalizar la transparencia del procedimiento e integrar el acta final del tribunal."
-            }
-        ],
+tribunal: [
+    {
+        rol: "TUTOR",
+        desc: `
+            <p>
+                El Tutor es el <strong>guía y asesor principal metodológico y técnico</strong>
+                del estudiante durante todo el proceso de elaboración de su modalidad
+                de graduación. Su nombramiento o aprobación está a cargo de la
+                Dirección de Carrera.
+            </p>
+
+            <h5 class="font-bold text-black mt-4 mb-2">
+                Funciones principales en Taller de Grado I:
+            </h5>
+
+            <ul class="list-disc pl-5 space-y-2">
+                <li>
+                    <strong>Orientación y delimitación:</strong>
+                    Ayuda a estructurar el tema, el problema de investigación,
+                    los alcances y la metodología, velando por la coherencia
+                    del proyecto.
+                </li>
+
+                <li>
+                    <strong>Revisiones y seguimiento:</strong>
+                    Realiza revisiones periódicas del trabajo y presenta el
+                    <strong>Acta de Seguimiento</strong> al Docente de
+                    Taller de Grado I.
+                </li>
+
+                <li>
+                    <strong>Autorización para defensa:</strong>
+                    Emite la <strong>Carta de Autorización</strong>
+                    (visto bueno) que habilita al estudiante a pasar a la
+                    defensa del Primer Panel.
+                </li>
+
+                <li>
+                    <strong>Carga horaria:</strong>
+                    Tiene una dedicación asignada de <strong>8 horas</strong>
+                    en Taller de Grado I.
+                </li>
+
+            <p>
+
+            </p>
+            </ul>
+        `
+    },
+
+    {
+        rol: "PANELISTA",
+        desc: `
+            <p>
+                El Panelista (o Docente Lector) se desempeña como
+                <strong>evaluador continuo y asesor complementario</strong>,
+                encargado de realizar el control de calidad intermedio
+                del proyecto.
+            </p>
+
+            <h5 class="font-bold text-black mt-4 mb-2">
+                Funciones principales en Taller de Grado I:
+            </h5>
+
+            <ul class="list-disc pl-5 space-y-2">
+                <li>
+                    <strong>Revisión técnica y metodológica:</strong>
+                    Revisa el avance del documento y elabora un acta oficial
+                    con sus observaciones.
+                </li>
+
+                <li>
+                    <strong>Registro de seguimiento:</strong>
+                    Presenta el <strong>Acta de Seguimiento</strong>
+                    requerida al Docente de Taller de Grado I.
+                </li>
+
+                <li>
+                    <strong>Emisión de aval:</strong>
+                    Firma la <strong>Carta de Autorización de Panelista</strong>
+                    para dar el visto bueno al trabajo.
+                </li>
+
+                <li>
+                    <strong>Evaluación en panel:</strong>
+                    Asiste y evalúa al estudiante durante la
+                    <strong>Defensa del Primer Panel</strong>.
+                </li>
+
+                <li>
+                    <strong>Carga horaria:</strong>
+                    Tiene una dedicación asignada de <strong>5 horas</strong>
+                    en Taller de Grado I.
+                </li>
+            </ul>
+        `
+    },
+],
 
         elementos: [
             "<strong>Tema de Investigación:</strong> Plantea el tema de investigación de manera exploratoria, para construir la fundamentación teórica en base al proceso científico.",
@@ -78,7 +162,7 @@ const dataModalidades = {
         ],
 
         docs: {
-            tribunal: "https://docs.google.com/document/d/ejemplo-tesis-tribunal",
+            tribunal: "https://drive.google.com/file/d/1jAvWPa4rOfqxUgHO4FTHiZU7uF2i8rd6/view?usp=sharing",
             elementos: "https://docs.google.com/document/d/ejemplo-tesis-elementos",
             proceso: "https://docs.google.com/document/d/ejemplo-tesis-proceso",
             cronograma: "https://docs.google.com/document/d/ejemplo-tesis-cronograma"
