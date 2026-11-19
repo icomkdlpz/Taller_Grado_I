@@ -161,6 +161,33 @@ tribunal: [
             }
         ],
 
+        materialApoyo: [
+            {
+                nombre: "Acta de Seguimiento Tutor TGI_MKD",
+                url: "https://docs.google.com/document/d/1bQdE-I9sEnbUZk5wm8ebykeYV2NSl2dA/edit?usp=drive_link&ouid=110600722653600398805&rtpof=true&sd=true"
+            },
+            {
+                nombre: "Acta de Seguimiento Tutor TGI_ICO",
+                url: "https://docs.google.com/document/d/1B92AitnVweqenRaRZaXquJc0V9MqEu3V/edit?usp=drive_link&ouid=110600722653600398805&rtpof=true&sd=true"
+            },
+            {
+                nombre: "Acta de Seguimiento Panelista TGI_MKD",
+                url: "https://docs.google.com/document/d/1XNp9mXypnKy0bJFJdFl-BAaSvuH0HSln/edit?usp=drive_link&ouid=110600722653600398805&rtpof=true&sd=true"
+            },
+            {
+                nombre: "Acta de Seguimiento Panelista TGI_ICO",
+                url: "https://docs.google.com/document/d/1JZoOQl8XVq417H597_2zG6Yz_Ojr6BSD/edit?usp=drive_link&ouid=110600722653600398805&rtpof=true&sd=true"
+            },
+            {
+                nombre: "Carta Conformidad TUTOR. Primer Panel",
+                url: "https://docs.google.com/document/d/1OQtDOe65GqlR-3ngt5nP_GyzsFt1W9ER/edit?usp=drive_link&ouid=110600722653600398805&rtpof=true&sd=true"
+            },
+            {
+                nombre: "Carta Conformidad PANELISTA. Primer Panel",
+                url: "https://docs.google.com/document/d/1LIuxwCEDimg3N1CnbDS9iKbHg3EX9gmG/edit?usp=drive_link&ouid=110600722653600398805&rtpof=true&sd=true"
+            }
+        ],
+
         docs: {
             tribunal: "https://drive.google.com/file/d/1jAvWPa4rOfqxUgHO4FTHiZU7uF2i8rd6/view?usp=sharing",
             elementos: "https://docs.google.com/document/d/ejemplo-tesis-elementos",
@@ -168,6 +195,7 @@ tribunal: [
             cronograma: "https://docs.google.com/document/d/ejemplo-tesis-cronograma"
         }
     },
+
 
     plan: {
         titulo: "Plan de Negocio",
@@ -448,7 +476,83 @@ function openModalidad(key) {
             </table>
         </div>
     `;
+// ==========================================
+// RENDERIZAR MATERIAL DE APOYO
+// ==========================================
 
+const materialContainer = document.getElementById("material-content");
+
+if (materialContainer) {
+
+    const botonesMaterial = data.materialApoyo.map(item => {
+
+        const clases = `
+            w-full min-h-[64px]
+            flex items-center gap-3
+            px-4 py-3
+            rounded-xl
+            bg-black text-cream
+            text-left text-sm font-semibold
+            transition-colors
+            hover:bg-gray-800
+        `;
+
+        const icono = `
+            <i class="fa-solid fa-file-lines text-lg"></i>
+            <span class="flex-1">${item.nombre}</span>
+        `;
+
+        // Si existe una URL, generar un enlace funcional.
+        if (item.url && item.url.trim() !== "") {
+
+            return `
+                <a
+                    href="${item.url}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="${clases}"
+                >
+                    ${icono}
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            `;
+
+        }
+
+        // Si todavía no existe una URL, mostrar el botón deshabilitado.
+        return `
+            <button
+                type="button"
+                disabled
+                title="Enlace pendiente de configuración"
+                class="${clases} opacity-50 cursor-not-allowed"
+            >
+                ${icono}
+
+                <i class="fa-solid fa-lock"></i>
+            </button>
+        `;
+
+    }).join("");
+
+
+    // Mostrar los seis botones en una cuadrícula adaptable.
+    materialContainer.innerHTML = `
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+            ${botonesMaterial}
+
+        </div>
+
+        <p class="text-xs text-gray-500 mt-3">
+            Selecciona el material de apoyo que necesites consultar.
+        </p>
+
+    `;
+
+}
 
     // Enlaces a los documentos
     document.getElementById("btn-doc-tribunal").href =
